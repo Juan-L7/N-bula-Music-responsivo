@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula-Iniciar sesion</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <header class="header-login">
+        <a class="logo" href="index.html">
+            <img src="imgs/nebula-03.png" alt="logo-nebula">
+        </a>
+    </header>
+    <main>
+        <h2>Inicia Sesión</h2>
+        <h3>Ingresa tus credenciales de acceso</h3>
+        <form method="post" action="/autenticacion">
+            <div>
+                <label for="correo">Correo Electrónico</label>
+                <input id="correo" type="email" name="correo" placeholder="juan@gmail.com" required>
+
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" id="contrasenia" name="contrasenia" required>
+
+            </div>
+            <input type="submit">
+            <button type="reset">Cancelar</button>
+        </form>
+        <div>
+            <a>¿Aún no tienes cuenta? </a>
+            <a class="registrar" href="registro.html"> Regístrate</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Nebula Music. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

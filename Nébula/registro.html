@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula- Registrate</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <header class="header-register">
+        <a class="logo" href="index.html">
+            <img src="imgs/nebula-03.png" alt="logo-nebula">
+        </a>
+    </header>
+    <main>
+        <h2>Registrate</h2>
+        <form action="http://localhost:8080/api/registro" method="post">
+            <div>
+                <label for="txt_name" >
+                    Nombre:
+                </label>
+                <input
+                        id="txt_name"
+                        name="nombre"
+                        type="text"
+                        required
+                        placeholder="Escriba su nombre completo"
+                        minlength="3"
+                >
+
+            </div>
+            <div>
+                <label for="txt_email" >
+                    E-Mail
+                </label>
+                <input
+                        id="txt_email"
+                        name="correo"
+                        type="email"
+                        required
+                        placeholder="Escriba su correo">
+            </div>
+            <div>
+                <label for="txt_contrasenia" >
+                    Contraseña
+                </label>
+                <input
+                        id="txt_contrasenia"
+                        name="contrasenia"
+                        type="password"
+                        required
+                        placeholder="Escriba su contraseña">
+            </div>
+
+            <div>
+                <label for="txt_pseudonimo">Nombre de usuario</label>
+                <input
+                        id="txt_pseudonimo"
+                        type="text"
+                        required
+                        name="txt_pseudonimo"
+                        pattern="[a-zA-Z]{3,10}-[0-9]{2,10}"
+                >
+            </div>
+
+            <div class="radio-group">
+                <label>Género:</label>
+                <label for="genero-masculino">
+                    <input
+                            type="radio"
+                            id="genero-masculino"
+                            name="rad_genero"
+                            value="masculino"> Masculino</label>
+                <label for="genero-femenino">
+                    <input
+                            type="radio"
+                            id="genero-femenino"
+                            name="rad_genero"
+                            value="femenino"> Femenino</label>
+                <label for="genero-otro">
+                    <input
+                            type="radio"
+                            id="genero-otro"
+                            name="rad_genero"
+                            value="otro"> Otro</label>
+            </div>
+
+            <div>
+                <label for="suscriptions-containe">Elige tu suscripción</label>
+                <select name="sel_suscripcion" id="suscriptions-containe">
+                    <option value="Gratis">Gratis</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Anual">Anual</option>
+                </select>
+            </div>
+            <div>
+                <label for="txt_dob">Fecha de nacimiento</label>
+                <input
+                        id="txt_dob"
+                        type="date"
+                        required
+                        name="fechaNacimiento"
+                >
+            </div>
+
+            <div class="terms">
+                <label for="chk-terminos">Acepto los terminos</label>
+                <input name="chk_terminos" id="chk-terminos" type="checkbox">
+            </div>
+            <div>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
+            </div>
+
+            <div class="opction">
+                <button type="submit">Registrar</button>
+                <button type="reset">Restablecer</button>
+            </div>
+
+
+        </form>
+    </main>
+</body>
+</html>
